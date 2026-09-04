@@ -1,4 +1,4 @@
-# Multilingual RAG System (Powered by Gemini API)
+# Multilingual RAG System (Canadian English, Japanese, Taiwanese Mandarin)
 
 This project provides a lightweight and optimized Retrieval-Augmented Generation (RAG) system, designed to run smoothly even on older laptops with limited CPU and memory.
 It uses Google's Gemini API which provides a generous free tier, so you do not need to pay for OpenAI API credits.
