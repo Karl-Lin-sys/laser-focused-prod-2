@@ -1,0 +1,19 @@
+services:
+  rag-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laser-focused-prod-2:latest
+    container_name: multilingual-rag-gemini
+    environment:
+      # OpenAI APIの代わりにGoogle APIキーを利用
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./chroma_db:/app/chroma_db
+    # メモリとCPUに制限を設けて、古いPCでもフリーズしないよう最適化
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
